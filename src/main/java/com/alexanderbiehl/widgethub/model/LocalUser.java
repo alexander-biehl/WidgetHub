@@ -3,7 +3,7 @@ package com.alexanderbiehl.widgethub.model;
 import jakarta.persistence.*;
 
 @Entity
-public class User {
+public class LocalUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -15,9 +15,9 @@ public class User {
     private String email;
     private boolean active;
 
-    public User() {}
+    public LocalUser() {}
 
-    public User(long id, String username, String password, String email, boolean active) {
+    public LocalUser(long id, String username, String password, String email, boolean active) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -68,9 +68,9 @@ public class User {
     @Override
     public final boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User user)) return false;
+        if (!(o instanceof LocalUser localUser)) return false;
 
-        return getId() == user.getId() && getUsername().equals(user.getUsername()) && getEmail().equals(user.getEmail());
+        return getId() == localUser.getId() && getUsername().equals(localUser.getUsername()) && getEmail().equals(localUser.getEmail());
     }
 
     @Override
@@ -83,7 +83,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "LocalUser{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
