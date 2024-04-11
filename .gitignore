@@ -33,3 +33,4 @@ build/
 .vscode/
 .idea/
 db/password.txt
+.env
