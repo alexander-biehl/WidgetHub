@@ -10,5 +10,5 @@ import java.util.List;
 @RepositoryRestResource
 public interface WidgetRepository extends JpaRepository<Widget, Long> {
 
-    List<Widget> findbyName(@Param("name") String name);
+    // List<Widget> findbyName(@Param("name") String name);
 }
